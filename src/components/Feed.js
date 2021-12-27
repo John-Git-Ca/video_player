@@ -4,7 +4,7 @@ import {Box} from '@mui/material'
 const Feed = () => {
   return (
     <Box>
-      box
+      Feed FeedFeedFeedFeedFeedFeedFeed
     </Box>
   )
 }

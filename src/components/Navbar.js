@@ -2,6 +2,7 @@ import React from 'react'
 import {Typography, Box} from '@mui/material'
 import {Link} from 'react-router-dom'
 import SearchBar from './SearchBar'
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Navbar = () => {
   return (
@@ -13,15 +14,18 @@ const Navbar = () => {
         pt: 1,
         borderBottom: '1px solid #e3e3e3',
         position: 'fixed',
+        top: 0,
+        left: 0,
         backGround: 'white',
         gap: '10',
         width: '100%',
         zIndex: 100,
+        boxSizing: 'border-box'
       }}
     >
       <Link to='/' style={{textDecoration: 'none'}}>
         <Typography sx={{fontSize: 25, color: 'red', fontWeight: 800}}>
-          Youtube
+          <YouTubeIcon />Youtube
         </Typography>
       </Link>
       <SearchBar />
