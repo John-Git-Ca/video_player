@@ -1,16 +1,19 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import {IconButton, Paper} from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 import {useNavigate} from 'react-router-dom'
+import { useStateContext } from '../contexts/StateContextProvider';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const navigate = useNavigate()
+  const {fetchData} = useStateContext()
   // console.log(searchTerm)
 
   const handleSubmit= (e) => {
     e.preventDefault()
     navigate('/search')
+    fetchData(`search?part=snippet&key=AIzaSyA5PnZEJGNmor7jKnb_LkovRID4xKiKHGw&q=${searchTerm}`)
   }
 
   return (
