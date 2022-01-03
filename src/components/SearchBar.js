@@ -5,7 +5,7 @@ import {useNavigate} from 'react-router-dom'
 import { useStateContext } from '../contexts/StateContextProvider';
 
 const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState('a')
   const navigate = useNavigate()
   const {fetchData} = useStateContext()
   // console.log(searchTerm)
@@ -13,7 +13,7 @@ const SearchBar = () => {
   const handleSubmit= (e) => {
     e.preventDefault()
     navigate('/search')
-    fetchData(`search?part=snippet&key=AIzaSyA5PnZEJGNmor7jKnb_LkovRID4xKiKHGw&q=${searchTerm}`)
+    fetchData(`search?part=snippet&q=${searchTerm}`)
   }
 
   return (

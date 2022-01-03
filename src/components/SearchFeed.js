@@ -24,13 +24,13 @@ const SearchFeed = () => {
       }}
     >
       {
-        data.length !== 0 && data.map(video =>{
+        data.length !== 0 && data.map(video =>(
           <VideoItem
             key={video.id.videoId}
             video={video}
             id={video.id.videoId}
           />
-        })
+        ))
       }
     </Box>
   )
