@@ -15,7 +15,7 @@ export const StateContextProvider = ({children}) => {
     const data = await axios.get(`${baseUrl}/${url}`, {
       params: {
         key: process.env.REACT_APP_API_KEY,
-        maxResults: 50
+        maxResults: 60
       }
     })
     console.log(data)
@@ -27,7 +27,7 @@ export const StateContextProvider = ({children}) => {
     const data1 = await axios.get(`${baseUrl}/${url}`, {
       params:{
         key: process.env.REACT_APP_API_KEY,
-        maxResults: 50,
+        maxResults: 60,
         regionCode: 'IN',
       }
     })

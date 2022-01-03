@@ -2,13 +2,14 @@ import React from 'react'
 import { useStateContext } from '../contexts/StateContextProvider'
 import {Box} from '@mui/material'
 import VideoItem from './VideoItem'
+import Loader from './Loader'
 
 const SearchFeed = () => {
 
   const {data, loading} = useStateContext()
   if(loading){
     return(
-      <div>loading........................................</div>
+      <Loader />
     )
   }
   return (

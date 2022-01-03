@@ -11,16 +11,17 @@ const Navbar = () => {
         display: 'flex',
         justifyContent: 'space-between',
         p: 2,
-        pt: 1,
         borderBottom: '1px solid #e3e3e3',
         position: 'fixed',
         top: 0,
         left: 0,
-        backGround: 'white',
+        backGroundColor: 'white',
         gap: '10',
         width: '100%',
         zIndex: 100,
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        opacity: 1,
+        
       }}
     >
       <Link to='/' style={{textDecoration: 'none'}}>

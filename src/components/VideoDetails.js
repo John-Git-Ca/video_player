@@ -24,7 +24,14 @@ const VideoDetails = () => {
   },[results])
   return (
     <>
-    <Box>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        mt: 10,
+      }}
+    >
 
       <ReactPlayer
         controls

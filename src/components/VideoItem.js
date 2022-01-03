@@ -12,8 +12,8 @@ const VideoItem = ({video, id}) => {
     >
       <Card
         sx={{
-          width: 400,
-          height:310,
+          width: 300,
+          height:232.5,
           boxShadow: 'none',
           borderRadius: 0,
         }}

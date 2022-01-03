@@ -5,7 +5,7 @@ import {useNavigate} from 'react-router-dom'
 import { useStateContext } from '../contexts/StateContextProvider';
 
 const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState('a')
+  const [searchTerm, setSearchTerm] = useState('')
   const navigate = useNavigate()
   const {fetchData} = useStateContext()
   // console.log(searchTerm)
@@ -24,6 +24,7 @@ const SearchBar = () => {
         borderRadius: 20,
         border: '1px solid #e3e3e3',
         pl: 2,
+        margin: 'auto',
         boxShadow: 'none',
         mr: 5,
       }}
