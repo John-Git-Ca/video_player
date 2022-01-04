@@ -13,22 +13,22 @@ const VideoItem = ({video, id}) => {
       <Card
         sx={{
           width: 300,
-          height:232.5,
+          height:252.5,
           boxShadow: 'none',
           borderRadius: 0,
         }}
       >
         <CardMedia
           component='img'
-          height='250'
+          height='70%'
           image={video?.snippet?.thumbnails?.high.url ||
             'https://i.pinimg.com/474x/30/88/a3/3088a3ebaf713600adacd00397ee410d.jpg'}
           alt='green iguana'
           sx={{borderRadius: 2}}
         />
         <CardContent>
-          <Typography sx={{fontSize: 16, fontWeight: 600}}>
-            {video?.snippet?.title}
+          <Typography sx={{fontSize: 13, fontWeight: 600}}>
+            {video?.snippet?.title + " " + id}
           </Typography>
         </CardContent>
       </Card>

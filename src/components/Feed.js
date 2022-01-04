@@ -24,7 +24,7 @@ const Feed = () => {
   return (
     <Grid container spacing={0} sx={{mt: 10, pl: 1}}>
 
-      <Grid item xs={1} md={1} sx={{mt: 15}}>
+      <Grid item xs={1} md={1} sx={{mt: 13}}>
           {results?.map(category => (
             <Button
             variant='contained'
@@ -56,10 +56,8 @@ const Feed = () => {
               fontSize: 25,
               fontWeight: 900,
               p: 3,
-              pb: 1,
-              pt: 0,
             }}
-          >Recommand Videos</Typography>
+          >Recommand Videos </Typography>
         </Box>
 
         <Box
@@ -70,14 +68,15 @@ const Feed = () => {
             alignItems: 'center',
             gap: 2,
             p: 1,
+            pl: 3,
           }}
         >
           {data?.map(video=>(
 
             <VideoItem
               video={video}
-              id={video.id.videoId}
-              key={video.id.videoId}
+              id={(video.id.videoId && video.id.videoId) || video.id}
+              key={(video.id.videoId && video.id.videoId) || video.id}
             ></VideoItem>
           )
           )}
